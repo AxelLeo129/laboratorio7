@@ -13,7 +13,11 @@ NPM < 6.x  *Probado en version 6.14.13
 ```
 npm install  
 ```
->iniciar servidor
+>Compilar solo Babel
+```
+npm run-script run-babel
+```  
+>Compilar con Webpack y Babel
 ```
 npm start
 ```  
