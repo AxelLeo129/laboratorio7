@@ -10,6 +10,36 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/app/components/progress.js":
+/*!****************************************!*\
+  !*** ./src/app/components/progress.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"progress\": () => (/* binding */ progress)\n/* harmony export */ });\n/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.css */ \"./node_modules/bootstrap/dist/css/bootstrap.css\");\n\nvar progress = function progress(title, value) {\n  var label = document.createElement('label');\n  label.innerHTML = title;\n  var progress_div1 = document.createElement('div');\n  progress_div1.classList.add('progress', 'mb-5');\n  var progress_div2 = document.createElement('div');\n  progress_div2.classList.add('progress-bar');\n  progress_div2.setAttribute('role', 'progressbar');\n  progress_div2.style.width = value + '%';\n  progress_div2.setAttribute('aria-valuenow', value);\n  progress_div2.setAttribute('aria-valuemin', '0');\n  progress_div2.setAttribute('aria-valuemax', '100');\n  progress_div2.innerHTML = value + '%';\n  progress_div1.appendChild(progress_div2);\n  var global_div = document.createElement('div');\n  global_div.appendChild(label);\n  global_div.appendChild(progress_div1);\n  return global_div;\n};\n\n//# sourceURL=webpack://laboratorio6/./src/app/components/progress.js?");
+
+/***/ }),
+
+/***/ "./src/app/components/story.js":
+/*!*************************************!*\
+  !*** ./src/app/components/story.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"story\": () => (/* binding */ story)\n/* harmony export */ });\n/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.css */ \"./node_modules/bootstrap/dist/css/bootstrap.css\");\n/* harmony import */ var animate_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! animate.css */ \"./node_modules/animate.css/animate.css\");\n\n\nvar story = function story(title, animation, content, options) {\n  var options_list = document.createElement('div');\n  options_list.classList.add('list-group');\n  options.forEach(function (e) {\n    var a = document.createElement('a');\n    a.classList.add('list-group-item', 'list-group-item-action', 'list-group-item-' + e.color);\n    a.setAttribute('href', e.link);\n    a.innerHTML = e.text;\n    options_list.appendChild(a);\n  });\n  var div_content = document.createElement('div');\n  div_content.innerHTML = content;\n  var h3 = document.createElement('h3');\n  h3.classList.add('animate__animated', animation);\n  h3.innerHTML = title;\n  var header = document.createElement('header');\n  header.appendChild(h3);\n  var card_body = document.createElement('div');\n  card_body.classList.add('card-body');\n  card_body.appendChild(header);\n  card_body.appendChild(div_content);\n  card_body.appendChild(options_list);\n  var card = document.createElement('div');\n  card.classList.add('card');\n  card.appendChild(card_body);\n  var article = document.createElement('article');\n  article.classList.add('mb-5');\n  article.appendChild(card);\n  return article;\n};\n\n//# sourceURL=webpack://laboratorio6/./src/app/components/story.js?");
+
+/***/ }),
+
+/***/ "./src/app/pages/buen_final/buen_final.js":
+/*!************************************************!*\
+  !*** ./src/app/pages/buen_final/buen_final.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"startBuenFinal\": () => (/* binding */ startBuenFinal)\n/* harmony export */ });\n/* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/progress */ \"./src/app/components/progress.js\");\n/* harmony import */ var _components_story__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/story */ \"./src/app/components/story.js\");\n/* harmony import */ var _global_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../global.scss */ \"./src/global.scss\");\n\n\n\nvar startBuenFinal = function startBuenFinal() {\n  document.getElementById(\"progress\").appendChild((0,_components_progress__WEBPACK_IMPORTED_MODULE_0__.progress)(\"Progreso de la historia:\", 100));\n  document.getElementById(\"content\").appendChild((0,_components_story__WEBPACK_IMPORTED_MODULE_1__.story)(\"Final\", 'animate__rubberBand', \"<div class=\\\"alert alert-success\\\" role=\\\"alert\\\">\\n            <p>Ves una luz al fondo y..... Despiertas. Todo fuel un buen sue\\xF1o.</p>\\n            <h5 class=\\\"alert-heading\\\">FIN</h5>\\n        </div>\", []));\n};\nstartBuenFinal();\n\n//# sourceURL=webpack://laboratorio6/./src/app/pages/buen_final/buen_final.js?");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/animate.css/animate.css":
 /*!***************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/animate.css/animate.css ***!
@@ -157,36 +187,6 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 /***/ ((module) => {
 
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\n\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://laboratorio6/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
-
-/***/ }),
-
-/***/ "./src/app/components/progress.js":
-/*!****************************************!*\
-  !*** ./src/app/components/progress.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"progress\": () => (/* binding */ progress)\n/* harmony export */ });\n/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.css */ \"./node_modules/bootstrap/dist/css/bootstrap.css\");\n\r\n\r\nconst progress = (title, value) => {\r\n    const label = document.createElement('label');\r\n    label.innerHTML = title;\r\n    const progress_div1 = document.createElement('div');\r\n    progress_div1.classList.add('progress', 'mb-5');\r\n    const progress_div2 = document.createElement('div');\r\n    progress_div2.classList.add('progress-bar');\r\n    progress_div2.setAttribute('role', 'progressbar');\r\n    progress_div2.style.width =  value + '%';\r\n    progress_div2.setAttribute('aria-valuenow', value);\r\n    progress_div2.setAttribute('aria-valuemin', '0');\r\n    progress_div2.setAttribute('aria-valuemax', '100');\r\n    progress_div2.innerHTML = value + '%';\r\n    progress_div1.appendChild(progress_div2);\r\n    const global_div = document.createElement('div');\r\n    global_div.appendChild(label);\r\n    global_div.appendChild(progress_div1);\r\n    return global_div;\r\n};\n\n//# sourceURL=webpack://laboratorio6/./src/app/components/progress.js?");
-
-/***/ }),
-
-/***/ "./src/app/components/story.js":
-/*!*************************************!*\
-  !*** ./src/app/components/story.js ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"story\": () => (/* binding */ story)\n/* harmony export */ });\n/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.css */ \"./node_modules/bootstrap/dist/css/bootstrap.css\");\n/* harmony import */ var animate_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! animate.css */ \"./node_modules/animate.css/animate.css\");\n\r\n\r\n\r\nconst story = (title, animation, content, options) => {\r\n    const options_list = document.createElement('div');\r\n    options_list.classList.add('list-group');\r\n\r\n    options.forEach(e => {\r\n       const a = document.createElement('a');\r\n       a.classList.add('list-group-item', 'list-group-item-action', 'list-group-item-' + e.color); \r\n       a.setAttribute('href', e.link);\r\n       a.innerHTML = e.text;\r\n       options_list.appendChild(a);\r\n    });\r\n\r\n    const div_content = document.createElement('div');\r\n    div_content.innerHTML = content;\r\n\r\n    const h3 = document.createElement('h3');\r\n    h3.classList.add('animate__animated', animation);\r\n    h3.innerHTML = title;\r\n\r\n    const header = document.createElement('header');\r\n    header.appendChild(h3);\r\n\r\n    const card_body = document.createElement('div');\r\n    card_body.classList.add('card-body');\r\n    card_body.appendChild(header);\r\n    card_body.appendChild(div_content);\r\n    card_body.appendChild(options_list);\r\n\r\n    const card = document.createElement('div');\r\n    card.classList.add('card');\r\n    card.appendChild(card_body);\r\n\r\n    const article = document.createElement('article');\r\n    article.classList.add('mb-5');\r\n    article.appendChild(card);\r\n    \r\n    return article;\r\n}\n\n//# sourceURL=webpack://laboratorio6/./src/app/components/story.js?");
-
-/***/ }),
-
-/***/ "./src/app/pages/buen_final/buen_final.js":
-/*!************************************************!*\
-  !*** ./src/app/pages/buen_final/buen_final.js ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"startBuenFinal\": () => (/* binding */ startBuenFinal)\n/* harmony export */ });\n/* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/progress */ \"./src/app/components/progress.js\");\n/* harmony import */ var _components_story__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/story */ \"./src/app/components/story.js\");\n/* harmony import */ var _global_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../global.scss */ \"./src/global.scss\");\n\r\n\r\n\r\n\r\nconst startBuenFinal = () => {\r\n  document\r\n    .getElementById(\"progress\")\r\n    .appendChild((0,_components_progress__WEBPACK_IMPORTED_MODULE_0__.progress)(\"Progreso de la historia:\", 100));\r\n  document.getElementById(\"content\").appendChild(\r\n    (0,_components_story__WEBPACK_IMPORTED_MODULE_1__.story)(\r\n      \"Final\", 'animate__rubberBand',\r\n        `<div class=\"alert alert-success\" role=\"alert\">\r\n            <p>Ves una luz al fondo y..... Despiertas. Todo fuel un buen sueño.</p>\r\n            <h5 class=\"alert-heading\">FIN</h5>\r\n        </div>`,\r\n      []\r\n    )\r\n  );\r\n};\r\n\r\nstartBuenFinal();\r\n\n\n//# sourceURL=webpack://laboratorio6/./src/app/pages/buen_final/buen_final.js?");
 
 /***/ }),
 
