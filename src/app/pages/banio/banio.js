@@ -1,6 +1,7 @@
 import { progress } from "../../components/progress";
 import { story } from "../../components/story";
 import '../../../global.scss';
+import audio from '../../../assets/ambiente.mp3';
 
 export const startBanio = () => {
     document.getElementById('progress').appendChild(progress('Progreso de la historia:', 40));
@@ -8,7 +9,7 @@ export const startBanio = () => {
     `<p>
     Llegas al baño, parece todo normal, por lo que procedes a usarlo. De un instante a otro sientes una fuerte
     brisa que te pone la piel de gallina. <audio controls autoplay>
-        <source src="../src/assets/ambiente.mp3" type="audio/mpeg">
+        <source src="${audio}" type="audio/mpeg">
         Tu navegador no permite este recurso.
     </audio> De forma extraña vuelves a sentir la misma sensación de la mañana.
 </p>

@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"startLuchar\": () => (/* binding */ startLuchar)\n/* harmony export */ });\n/* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/progress */ \"./src/app/components/progress.js\");\n/* harmony import */ var _components_story__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/story */ \"./src/app/components/story.js\");\n/* harmony import */ var _global_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../global.scss */ \"./src/global.scss\");\n\n\n\nvar startLuchar = function startLuchar() {\n  document.getElementById('progress').appendChild((0,_components_progress__WEBPACK_IMPORTED_MODULE_0__.progress)('Progreso de la historia:', 80));\n  document.getElementById('content').appendChild((0,_components_story__WEBPACK_IMPORTED_MODULE_1__.story)('Luchas', 'animate__rubberBand', \"<p>\\n    Comienzas a forcejear, no logras liberarte. Sin embargo, sigues intentanto hasta que escuchas: <audio controls autoplay>\\n        <source src=\\\"../src/assets/susto.mp3\\\" type=\\\"audio/mpeg\\\">\\n        Tu navegador no permite este recurso.\\n    </audio> quedas desconcertado. Sigues luchando hasta que te liberas. Te das la vuelta y:\\n</p>\", [{\n    text: 'Siguiente',\n    color: 'primary',\n    link: 'mal_final.html'\n  }]));\n};\nstartLuchar();\n\n//# sourceURL=webpack://laboratorio6/./src/app/pages/luchar/luchar.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"startLuchar\": () => (/* binding */ startLuchar)\n/* harmony export */ });\n/* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/progress */ \"./src/app/components/progress.js\");\n/* harmony import */ var _components_story__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/story */ \"./src/app/components/story.js\");\n/* harmony import */ var _global_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../global.scss */ \"./src/global.scss\");\n/* harmony import */ var _assets_susto_mp3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../assets/susto.mp3 */ \"./src/assets/susto.mp3\");\n\n\n\n\nvar startLuchar = function startLuchar() {\n  document.getElementById('progress').appendChild((0,_components_progress__WEBPACK_IMPORTED_MODULE_0__.progress)('Progreso de la historia:', 80));\n  document.getElementById('content').appendChild((0,_components_story__WEBPACK_IMPORTED_MODULE_1__.story)('Luchas', 'animate__rubberBand', \"<p>\\n    Comienzas a forcejear, no logras liberarte. Sin embargo, sigues intentanto hasta que escuchas: <audio controls autoplay>\\n        <source src=\\\"\".concat(_assets_susto_mp3__WEBPACK_IMPORTED_MODULE_3__[\"default\"], \"\\\" type=\\\"audio/mpeg\\\">\\n        Tu navegador no permite este recurso.\\n    </audio> quedas desconcertado. Sigues luchando hasta que te liberas. Te das la vuelta y:\\n</p>\"), [{\n    text: 'Siguiente',\n    color: 'primary',\n    link: 'mal_final.html'\n  }]));\n};\nstartLuchar();\n\n//# sourceURL=webpack://laboratorio6/./src/app/pages/luchar/luchar.js?");
 
 /***/ }),
 
@@ -97,6 +97,16 @@ eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    opt
 /***/ ((module) => {
 
 eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=webpack://laboratorio6/./node_modules/css-loader/dist/runtime/noSourceMaps.js?");
+
+/***/ }),
+
+/***/ "./src/assets/susto.mp3":
+/*!******************************!*\
+  !*** ./src/assets/susto.mp3 ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"22f7baac2b4b1d49f7ca0b67295422d4.mp3\");\n\n//# sourceURL=webpack://laboratorio6/./src/assets/susto.mp3?");
 
 /***/ }),
 
@@ -404,6 +414,18 @@ eval("module.exports = \"data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/20
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -418,6 +440,26 @@ eval("module.exports = \"data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/20
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */

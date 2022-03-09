@@ -24,47 +24,47 @@ module.exports = {
     chunks: ['index']
   }),
   new HtmlWebPackPlugin({
-    template: './src/app/pages/adelantas/adelantas.html',
+    template: './src/index.html',
     filename: 'adelantas.html',
     chunks: ['adelantas']
   }),
   new HtmlWebPackPlugin({
-    template: './src/app/pages/banio/banio.html',
+    template: './src/index.html',
     filename: 'banio.html',
     chunks: ['banio']
   }),
   new HtmlWebPackPlugin({
-    template: './src/app/pages/buen_final/buen_final.html',
+    template: './src/index.html',
+    filename: 'calma.html',
+    chunks: ['calma']
+  }),
+  new HtmlWebPackPlugin({
+    template: './src/index.html',
     filename: 'buen_final.html',
     chunks: ['buen_final']
   }),
   new HtmlWebPackPlugin({
-    template: './src/app/pages/calma/calma.html',
-    filename: 'buen_final.html',
-    chunks: ['buen_final']
-  }),
-  new HtmlWebPackPlugin({
-    template: './src/app/pages/comedor/comedor.html',
+    template: './src/index.html',
     filename: 'comedor.html',
     chunks: ['comedor']
   }),
   new HtmlWebPackPlugin({
-    template: './src/app/pages/esperas/esperas.html',
+    template: './src/index.html',
     filename: 'esperas.html',
     chunks: ['esperas']
   }),
   new HtmlWebPackPlugin({
-    template: './src/app/pages/luchar/luchar.html',
+    template: './src/index.html',
     filename: 'luchar.html',
     chunks: ['luchar']
   }),
   new HtmlWebPackPlugin({
-    template: './src/app/pages/mal_final/mal_final.html',
+    template: './src/index.html',
     filename: 'mal_final.html',
     chunks: ['mal_final']
   }),
   new HtmlWebPackPlugin({
-    template: './src/app/pages/que/que.html',
+    template: './src/index.html',
     filename: 'que.html',
     chunks: ['que']
   })],
@@ -86,7 +86,15 @@ module.exports = {
             presets: ['@babel/preset-env'] 
           }
         }
-      }
+      },
+      {
+        test: /\.(png|jpe?g|gif|mp3)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
 };

@@ -1,5 +1,7 @@
 import { progress } from "./components/progress";
 import { story } from "./components/story";
+import { header } from './components/header';
+import audio from '../assets/ambiente.mp3';
 
 export const startApp = () => {
     document.getElementById('progress').appendChild(progress('Progreso de la historia:', 10));
@@ -13,7 +15,7 @@ export const startApp = () => {
     <p>
         Al instante de bajar del autobus, se escucharon a algunos cuervos chillar. De nuevo has sentido esa
         sensación. <audio controls autoplay loop>
-            <source src="../src/assets/ambiente.mp3" type="audio/mpeg">
+            <source src="${audio}" type="audio/mpeg">
             Tu navegador no permite este recurso.
         </audio> Sin embargo, no le tomas mucha importancia. Hoy es un día para disfrutar con tus amigos,
         pero,
@@ -25,4 +27,5 @@ export const startApp = () => {
             { text: 'Comer algo', color: 'secondary', link: 'comedor.html' },
             { text: 'Ver los primeros animales.', color: 'info', link: 'adelantas.html' },
             { text: 'Esperar', color: 'dark', link: 'esperas.html'}]));
+    header('header');
 }

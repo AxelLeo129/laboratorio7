@@ -1,6 +1,7 @@
 import { progress } from "../../components/progress";
 import { story } from "../../components/story";
 import '../../../global.scss';
+import audio from '../../../assets/ambiente.mp3';
 
 export const startComedor = () => {
     document.getElementById('progress').appendChild(progress('Progreso de la historia:', 40));
@@ -9,7 +10,7 @@ export const startComedor = () => {
     Llegas a los restaurantes, te compras un helado. Parece que es un día de mala suerte porque se te cae el
     helado. ¡Lo que faltaba! No solo tu mejor amigo no viene, sino que también se te cae tu comida. <audio
         controls autoplay>
-        <source src="../src/assets/ambiente.mp3" type="audio/mpeg">
+        <source src="${audio}" type="audio/mpeg">
         Tu navegador no permite este recurso.
     </audio> De forma extraña vuelves a sentir la misma sensación de la mañana.
 </p>

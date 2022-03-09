@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/app/components/header.js":
+/*!**************************************!*\
+  !*** ./src/app/components/header.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"header\": () => (/* binding */ header)\n/* harmony export */ });\n/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.css */ \"./node_modules/bootstrap/dist/css/bootstrap.css\");\n\nvar header = function header(div) {\n  var hr = document.createElement('hr');\n  hr.classList.add('my-4');\n  var p3 = document.createElement('p');\n  p3.innerHTML = 'Lee la historia y luego selecciona una opción para continuar con la misma.';\n  var summary = document.createElement('summary');\n  summary.innerHTML = 'Instrucciones';\n  var details = document.createElement('details');\n  details.appendChild(summary);\n  details.appendChild(p3);\n  var h1 = document.createElement('h1');\n  h1.classList.add('display-4', 'animate__animated', 'animate__pulse');\n  h1.innerHTML = 'El Zoológico de la Locura';\n  var div2 = document.createElement('div');\n  div2.classList.add('jumbotron');\n  div2.appendChild(h1);\n  div2.appendChild(details);\n  div2.appendChild(hr);\n  var p = document.createElement('p');\n  p.innerHTML = 'Universidad del Valle de Guatemala';\n  var p1 = document.createElement('p');\n  p1.innerHTML = 'Sistemas y tecnologías Web';\n  var p2 = document.createElement('p');\n  p2.innerHTML = 'Axel Leonardo López Barrera 20768';\n  var div1 = document.createElement('div');\n  div1.appendChild(p);\n  div1.appendChild(p1);\n  div1.appendChild(p2);\n  var global_div = document.getElementById(div);\n  global_div.appendChild(div1);\n  global_div.appendChild(div2);\n};\n\n//# sourceURL=webpack://laboratorio6/./src/app/components/header.js?");
+
+/***/ }),
+
 /***/ "./src/app/components/progress.js":
 /*!****************************************!*\
   !*** ./src/app/components/progress.js ***!
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"startApp\": () => (/* binding */ startApp)\n/* harmony export */ });\n/* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/progress */ \"./src/app/components/progress.js\");\n/* harmony import */ var _components_story__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/story */ \"./src/app/components/story.js\");\n\n\nvar startApp = function startApp() {\n  document.getElementById('progress').appendChild((0,_components_progress__WEBPACK_IMPORTED_MODULE_0__.progress)('Progreso de la historia:', 10));\n  document.getElementById('content').appendChild((0,_components_story__WEBPACK_IMPORTED_MODULE_1__.story)('Inicio', 'animate__bounce', \"<p>\\n        Acabas de llegar al zool\\xF3gico junto a tus compa\\xF1eros, pero el d\\xEDa de hoy todo parece distinto.\\n        Hace una horas al despertarte sentiste un aura extra\\xF1a que te ha seguido hasta la escuela y\\n        posteriormente\\n        al zoo...\\n    </p>\\n    <p>\\n        Al instante de bajar del autobus, se escucharon a algunos cuervos chillar. De nuevo has sentido esa\\n        sensaci\\xF3n. <audio controls autoplay loop>\\n            <source src=\\\"../src/assets/ambiente.mp3\\\" type=\\\"audio/mpeg\\\">\\n            Tu navegador no permite este recurso.\\n        </audio> Sin embargo, no le tomas mucha importancia. Hoy es un d\\xEDa para disfrutar con tus amigos,\\n        pero,\\n        anormalmente tu mejor amigo no ha podido asistir a la excursi\\xF3n debido a que se refri\\xF3 anoche.\\n    </p>\\n    <p>\\n        Ingresas al parque, el profesor le da instrucciones al grupo. Al parecer tienes unos minutos para:\\n    </p>\", [{\n    text: 'Ir al baño',\n    color: 'primary',\n    link: 'banio.html'\n  }, {\n    text: 'Comer algo',\n    color: 'secondary',\n    link: 'comedor.html'\n  }, {\n    text: 'Ver los primeros animales.',\n    color: 'info',\n    link: 'adelantas.html'\n  }, {\n    text: 'Esperar',\n    color: 'dark',\n    link: 'esperas.html'\n  }]));\n};\n\n//# sourceURL=webpack://laboratorio6/./src/app/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"startApp\": () => (/* binding */ startApp)\n/* harmony export */ });\n/* harmony import */ var _components_progress__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/progress */ \"./src/app/components/progress.js\");\n/* harmony import */ var _components_story__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/story */ \"./src/app/components/story.js\");\n/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/header */ \"./src/app/components/header.js\");\n/* harmony import */ var _assets_ambiente_mp3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/ambiente.mp3 */ \"./src/assets/ambiente.mp3\");\n\n\n\n\nvar startApp = function startApp() {\n  document.getElementById('progress').appendChild((0,_components_progress__WEBPACK_IMPORTED_MODULE_0__.progress)('Progreso de la historia:', 10));\n  document.getElementById('content').appendChild((0,_components_story__WEBPACK_IMPORTED_MODULE_1__.story)('Inicio', 'animate__bounce', \"<p>\\n        Acabas de llegar al zool\\xF3gico junto a tus compa\\xF1eros, pero el d\\xEDa de hoy todo parece distinto.\\n        Hace una horas al despertarte sentiste un aura extra\\xF1a que te ha seguido hasta la escuela y\\n        posteriormente\\n        al zoo...\\n    </p>\\n    <p>\\n        Al instante de bajar del autobus, se escucharon a algunos cuervos chillar. De nuevo has sentido esa\\n        sensaci\\xF3n. <audio controls autoplay loop>\\n            <source src=\\\"\".concat(_assets_ambiente_mp3__WEBPACK_IMPORTED_MODULE_3__[\"default\"], \"\\\" type=\\\"audio/mpeg\\\">\\n            Tu navegador no permite este recurso.\\n        </audio> Sin embargo, no le tomas mucha importancia. Hoy es un d\\xEDa para disfrutar con tus amigos,\\n        pero,\\n        anormalmente tu mejor amigo no ha podido asistir a la excursi\\xF3n debido a que se refri\\xF3 anoche.\\n    </p>\\n    <p>\\n        Ingresas al parque, el profesor le da instrucciones al grupo. Al parecer tienes unos minutos para:\\n    </p>\"), [{\n    text: 'Ir al baño',\n    color: 'primary',\n    link: 'banio.html'\n  }, {\n    text: 'Comer algo',\n    color: 'secondary',\n    link: 'comedor.html'\n  }, {\n    text: 'Ver los primeros animales.',\n    color: 'info',\n    link: 'adelantas.html'\n  }, {\n    text: 'Esperar',\n    color: 'dark',\n    link: 'esperas.html'\n  }]));\n  (0,_components_header__WEBPACK_IMPORTED_MODULE_2__.header)('header');\n};\n\n//# sourceURL=webpack://laboratorio6/./src/app/index.js?");
 
 /***/ }),
 
@@ -107,6 +117,16 @@ eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    opt
 /***/ ((module) => {
 
 eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=webpack://laboratorio6/./node_modules/css-loader/dist/runtime/noSourceMaps.js?");
+
+/***/ }),
+
+/***/ "./src/assets/ambiente.mp3":
+/*!*********************************!*\
+  !*** ./src/assets/ambiente.mp3 ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"cfda09ca05a25fce1871037464931234.mp3\");\n\n//# sourceURL=webpack://laboratorio6/./src/assets/ambiente.mp3?");
 
 /***/ }),
 
@@ -414,6 +434,18 @@ eval("module.exports = \"data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/20
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -428,6 +460,26 @@ eval("module.exports = \"data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/20
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
