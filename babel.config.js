@@ -10,6 +10,8 @@ const presets = [
       },
     },
   ],
-];
+]; 
 
-module.exports = { presets };
+const plugins = [ "@babel/plugin-proposal-function-bind" ];
+
+module.exports = { presets, plugins };

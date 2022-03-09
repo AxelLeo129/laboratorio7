@@ -27,5 +27,17 @@ export const startApp = () => {
             { text: 'Comer algo', color: 'secondary', link: 'comedor.html' },
             { text: 'Ver los primeros animales.', color: 'info', link: 'adelantas.html' },
             { text: 'Esperar', color: 'dark', link: 'esperas.html'}]));
-    header('header');
+
+    //Extra preset-env
+    const header_obj = {
+        id: 'header',
+        getHeader: function() {
+            header(this.id);
+        }
+    }
+
+    const unboundGetHeader = header_obj.getHeader;
+    const boundGetHeader = header_obj::unboundGetHeader;
+    boundGetHeader();
+    
 }
